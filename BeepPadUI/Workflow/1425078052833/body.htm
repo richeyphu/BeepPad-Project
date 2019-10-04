@@ -1,0 +1,159 @@
+
+				<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/strict.dtd">		    
+				<html>
+					<head>
+						<meta http-equiv="MSThemeCompatible" content="yes">
+						<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+						
+								<link rel="stylesheet" type="text/css" href='..\genericSkin\1248383926732,15.txt.css'/>
+								
+								<link rel="stylesheet" type="text/css" href='..\genericSkin\1464359561756,1.txt.css'/>
+								
+						
+							
+							<script src="../shared/ccc.js"></script>
+<script type="text/javascript">
+<!--
+
+function onpageload()
+{
+error_msg.style.display = "none";
+var launches=getParamVal("signlc");
+
+location="pcucmd://FrameDataLoaded/";
+}
+
+function forgotPassword()
+{
+    location.href="pcucmd://fullbrowse?url='https://www.corel.com/corel/accountForgotPassword.jsp'";
+}
+
+function processerror(strError)
+{
+	var nIndex = strError.indexOf("|");
+	var strErrorDesc = strError;
+	var strErrorcode;
+	if (nIndex >= 0)
+	{
+		strErrorDesc = strErrorDesc.substr(nIndex + 1);
+		strErrorCode = strError.substr(0, nIndex);
+    }
+    error_msg.style.display = "";
+    error_msg_td.innerText = strErrorDesc;
+}
+
+function processserials(strSerials) {
+    setCookie("serials", strSerials);
+    location.href = "pcucmd://next";
+}
+
+function logon()
+{
+    error_msg.style.display = "none";
+    var strWorkflow = getParamVal("workflow");
+    if (strWorkflow == "retrievekey") {
+        location = "pcucmd://getuserproductserials?username='" + document.getElementById("username").value + "'&password='" + document.getElementById("password").value + "';onerror=processerror&onsuccess=processserials";
+    }
+    else {
+        location = "pcucmd://authenticate?username='" + document.getElementById("username").value + "'&password='" + document.getElementById("password").value + "';onerror=processerror";
+        location = "pcucmd://Continue?condition=true";
+    }
+}
+-->
+</script>
+						
+						
+					</head>
+			    	
+			    	<body onload="onpageload();" tabindex="-1">
+							
+							
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+	
+
+
+<div id="ButtonBar" style="display: none;">
+	<div style="width: 100%; height: 100%; padding: 0px; margin: 0px; border: none;" id="Table1">
+		<div style="float:left;text-align:left">
+			<table align="center">
+				<tr>
+					
+				</tr>
+			</table>
+		</div>
+		<div style="float:right;text-align:right">
+			<table align="center">
+				<tr>
+					<td><button style='overflow:visible;width:100%' class='buttonBar' type='button' accessKey='B' id='pcubtnback' name='pcubtnback'  onclick="location='pcucmd://SetLastSequence'"><u>B</u>ack</button></td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+	
+
+
+						
+						
+							
+								<div id="pcu_data" style="display:none;">
+									PageDimension:695,514
+								</div>
+							
+							
+						
+						
+							
+							<div class="content">
+	<div class="content_inner">
+        <h1>Sign in</h1>
+		<p>Enter the email address and password for your Corel Account.</p>
+		<table>
+			<tr>
+				<td><p>Username:&nbsp;&nbsp;&nbsp;</p></td>
+				<td><input id="username" type="text" size="35"/><td>
+			</tr>
+			<tr>
+				<td><p>Password:&nbsp;&nbsp;&nbsp;</p></td>
+				<td><input id="password" type="password" size="35"/></td>
+			</tr>
+		</table>
+		<button class="workflowbutton" accesskey="s" type="button" id="idSignIn" name="idSignIn" onclick="idSignIn.click();"><u>S</u>ign in</button>
+		<p><a href="javascript:forgotPassword();">Forgot password?</a></p>
+		<div id="error_msg" style="display: none">
+			<table>
+				<tr>
+					<td valign="top"><img alt="" src="../shared/images/cancel_icon.png" /></td>
+					<td id="error_msg_td"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+						
+					</body>
+				</html>
+				

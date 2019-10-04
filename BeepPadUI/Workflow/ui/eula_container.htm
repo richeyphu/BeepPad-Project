@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title></title>
+	<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" />
+	<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" />
+	<meta http-equiv="MSThemeCompatible" content="yes">
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../shared/ccc.css" />
+    <script src="../shared/ccc.js"></script>
+    <script language="javascript">
+	function onLoad() {
+	  location = 'pcucmd://ContainerLoaded/';
+	}
+	function markread(obj) {
+		var acceptbtn = document.getElementById('pcubtnaccept');
+		if (obj.checked == true) {
+			acceptbtn.disabled = false;
+		}
+		else {
+			acceptbtn.disabled = true;
+		}
+	}
+	function OnAction(type) {
+		var file = "<storage>/ui/";
+		if (type == 'eula') {
+			file += 'License.htm';
+		}
+		else {
+			file += 'Tos.htm';
+		}
+	    location = "pcucmd://browse?url='" + file + "'&suppressnext=true";
+	}
+    </script>
+	<style>
+		body {
+			font-size: 12px;
+			background-image: none;
+		}
+		.BannerStyle {
+			margin-top: 1.083em; /* 13px */
+		}
+		.eulacontainer {
+			position: relative;
+			width: 49.167em; /* 590px */
+			height: 400px; /* 380px */
+			margin: 0 0.833em 0.833em 0.833em; /* 10px */
+			padding: 0 0.833em 0.833em 0.833em; /* 10px */
+		}
+		.eulabannerimg {
+			width: 100%;
+		}
+		.eulabuttoncontainer {
+			position: absolute;
+			bottom: 0;
+			left: 0.833em; /* 10px */
+			width: 100%;
+			text-align: right;
+		}
+		.eulaframe {
+			margin-bottom: 1.250em; /* 15px */
+			height: 23.333em; /* 280px */
+			width: 47.500em; /* 570px */
+		}
+		#readcheckbox {
+			margin-left: -0.250em; /* -3px */
+		}
+		#optbuttons {
+			margin-top: 0.833em; /* 10px */
+		}
+	</style>
+    </head>
+	<body onload="onLoad()" scroll="no">
+		<div class="BannerStyle"><img class="eulabannerimg" src="../shared/Images/banner.png"></div>
+		<div class="eulacontainer">
+			<h1>Please read the following license agreement carefully</h1>
+			<iframe id="eulaframe" class="eulaframe" src="License.htm"></iframe>
+			<div id="autodownload">
+				<input id="readcheckbox" type="checkbox" onclick="markread(this);" />
+				<label for="readcheckbox">I accept the terms in the license agreement</label>
+			</div>
+			<div class="eulabuttoncontainer">
+				<div id="optbuttons">
+				  <button class="initiator" type='button' accesskey='A' id='pcubtnaccept' name='pcubtnaccept' onclick="location='pcucmd://Continue/'" tabindex="1" disabled><u>A</u>ccept</button>
+				</div>
+			</div>
+		</div>
+		<div id="pcu_data" style="display:none;">
+			PageDimension:612,494
+		</div>
+	</body>
+</html>

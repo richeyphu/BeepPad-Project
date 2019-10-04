@@ -1,0 +1,162 @@
+/* Painter 2018 trial workflow skin */
+
+body,table,tr,td,input,select {
+	font-family: Segoe UI, Arial, sans-serif;
+	font-size:12px;
+	color: white;
+	margin:0;
+	padding:0;
+}
+body {
+	overflow:auto;
+	background:#474747;
+}
+image, img {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+p, li  {
+	font-size: 1em; /* 12px */
+	line-height: 1.333em; /* 16px */
+	font-weight: normal;
+}
+a {
+	color: white;
+	text-decoration: underline;
+}
+p, ul, h1, h2 {
+	margin-top: 0.833em; /* 10px */
+	margin-bottom: 0.833em; /* 10px */
+}
+input {
+	font-size: 1.083em; /* 13px */
+	vertical-align: middle;
+	padding: 0.167em; /* 2px */
+	color: black;
+}
+input[type=text] {
+	background-color: #999999;
+}
+button {
+	font-family: Segoe UI, Arial, sans-serif;
+	font-size:1em; /* 12px */
+	height: 1.667em; /* 20px */
+	margin-left:0.417em; /* 5px */
+	margin-right:0.417em; /* 5px */
+}
+h1 {
+	font-size: 1.167em; /* 14px */
+	font-weight: bold;
+}
+h2  {
+	font-size: 1.083em; /* 13px */
+	font-style: italic;
+}
+.subheading {
+	font-weight: bold;
+}
+
+/* trial screen */
+#content {
+	width: 57.083em; /* 685px */
+	height: 32.500em; /* 390px */
+	overflow: hidden;
+}
+.content_inner {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	overflow: hidden;
+}
+div.content_inner p {
+	padding: 0;
+}
+.img_col {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.text_col {
+	float: right;
+	position: relative;
+	padding: 1.250em; /* 15px */
+	width: 27.167em; /* 326px */
+	height: 30.000em; /* 329px */
+}
+.buttoncol {
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom:	0;
+}
+.workflowbutton,.buynowbutton {
+	cursor: pointer;
+	color: #FFFFFF;
+	border: 0;
+	margin: 0;
+}
+.workflowbutton {
+	background-color: #16AE97;
+	height: 2.250em; /* 27px */
+}
+
+/* Painter 2018 trial screens */
+.darklink {
+	color: #555555;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.trialtable {
+	background-color: #EBEBEB;
+}
+.trialh1gr {
+	font-size: 1.500em; /* 18px */
+	font-weight: bold;
+	text-align: center;
+	color: #555555;
+	height: 4.167em; /* 75px */
+	padding: 0 0.556em; /* 0 10px */
+}
+.trialh1wh {
+	text-align: center;
+	font-size: 1.167em; /* 14px */
+	font-weight: bold;
+	color: white;
+	height: 5.000em; /* 70px */
+	padding: 0 0.714em; /* 0 10px */
+	background-color: #555555;
+}
+.rightcolcontenttop {
+	height: 6.250em; /* 75px */
+}
+.lightbulb {
+	margin: 0 0.833em; /* 0 10px */
+}
+.mbstr {
+	font-size: 1.083em; /* 13px */
+	color: #E7E994;
+}
+.tipsbrick {
+	padding-right: 0.769em; /* 10px */
+	font-size: 1.083em; /* 13px */
+	color: #555555;
+}
+.rightcolmiddle {
+	height: 0.250em; /* 3px */
+}
+.rightcolcontentbtm {
+	background-color: #555555;
+	text-align: center;
+	height: 6.833em; /* 82px */
+}
+.buttonprodname {
+	font-size: 1.333em; /* 16px */
+	font-weight: bold;
+	margin-bottom: 0.563em; /* 9px */
+}
+.buynowbutton {
+	font-size: 1.333em; /* 16px */
+	background-color:#009CFF;
+}

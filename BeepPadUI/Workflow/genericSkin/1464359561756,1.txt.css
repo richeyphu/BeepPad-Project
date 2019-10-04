@@ -1,0 +1,104 @@
+/* Painter 2018 generic workflow skin */
+
+body,table,tr,td,input,select {
+	font-family: Segoe UI, Arial, sans-serif;
+	font-size:12px;
+	color: white;
+	margin:0;
+	padding:0;
+}
+body {
+	overflow:auto;
+	background:#474747;
+}
+image, img {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+p, li  {
+	font-size: 1em; /* 12px */
+
+	font-weight: normal;
+}
+a {
+	color: white;
+	text-decoration: underline;
+}
+p, ul, h1, h2 {
+	margin-top: 0.833em; /* 10px */
+	margin-bottom: 0.833em; /* 10px */
+}
+input {
+	font-size: 1.083em; /* 13px */
+	vertical-align: middle;
+	padding: 0.167em; /* 2px */
+	color: black;
+}
+input[type=text] {
+	background-color: #999999;
+}
+button {
+	font-family: Segoe UI, Arial, sans-serif;
+	font-size:1em; /* 12px */
+	height: 1.667em; /* 20px */
+	margin-left:0.417em; /* 5px */
+	margin-right:0.417em; /* 5px */
+}
+h1 {
+	font-size: 1.167em; /* 14px */
+	font-weight: bold;
+}
+h2  {
+	font-size: 1.083em; /* 13px */
+	font-style: italic;
+}
+.subheading {
+	font-weight: bold;
+}
+
+/* generic screen */
+.content, #content {
+	width: 57.083em; /* 685px */
+	height: 32.500em; /* 390px */
+	overflow: hidden;
+}
+.content_inner {
+	width: 54.583em; /* 655px */
+	height: 30.000em; /* 360px */
+	margin: 0.417em; /* 5px */
+	padding: 0.833em; /* 10px */
+	background-color: black;
+	overflow: hidden;
+}
+div.content_inner p {
+	padding: 0;
+}
+.workflowbutton {
+	cursor: pointer;
+	color: #FFFFFF;
+	border: 0;
+	margin: 0;
+	background-color: #16AE97;
+	height: 2.250em; /* 27px */
+}
+
+/* enter key page */
+.ea_table {
+	margin-top: 1.250em; /* 15px */
+}
+tr.ea_rowtxt td {
+	padding: 0.833em; /* 10px */
+	width: 33%;
+	vertical-align: top;
+}
+tr.ea_rowact td {
+	text-align: center;
+	padding: 0.833em 0.833em 1.917em 0.833em; /* 10px 10px 23px 10px */
+	width: 33%;
+}
+.ea_cellborder {
+	border-right-width:thin;
+	border-right-color:Silver;
+	border-right-style:solid;
+}

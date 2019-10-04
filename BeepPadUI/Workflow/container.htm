@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<meta http-equiv="MSThemeCompatible" content="yes">
+		<link href="shared/ccc.css" type="text/css" rel="STYLESHEET">
+		<script type="text/javascript" src="shared/ccc.js"></script>
+        <script type="text/javascript" src="shared/jquery.js"></script>
+        <script type="text/javascript">
+            function init() {
+                document.location='pcucmd://FrameLoaded';
+                location='pcucmd://ContainerLoaded/';
+            }
+            function dragWnd() {
+                try {
+                    StartMoveWindow();
+                }
+                catch (err) {}
+            }
+        </script>
+
+	</head>
+	<body onload="init()" style="overflow: hidden">
+		<!-- outermost container -->
+		<table id="outerContainer" class="OuterContainer" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td>
+					<!-- this is the area that holds the top banner-->
+					<div id="banner" class="BannerStyle">
+						<div onmousedown="dragWnd();"><img src="shared/Images/banner.png" class="BannerImg"></div>
+						<div id="divTrialRemainCounter" style="display:none">
+							<table id="counterTable" border="0">
+							<!-- this is the sub area for the days remaining counter-->
+							<!-- This is the trail count down box -->
+							<tr>
+								<td>
+								    <div id="divCountOnBanner"></div>
+								</td>
+								<td>
+									<div id="divDaysLeftOnBanner">DAYS<br />LEFT</div>
+								</td>
+                                <td>
+                                    <div id="divTrialCounterSpace">&nbsp;</div>
+								</td>
+							</tr>
+							</table>
+						</div>
+						<div class="topclosediv">
+							<img onclick="CloseDlg();" id="topcloseImg" src="shared/Images/topclose.png">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr id="message" valign="top" >
+				<td>
+					<!-- this is the area that contains the main content -->
+					<iframe align="center" id="Content" name="Content" frameBorder="0" allowTransparency="true"></iframe>
+				</td>
+			</tr>
+			<tr id="tdProgress">
+				<!-- this is the area for the progress bar -->
+				<td>
+					<div id="divUnderSlider">
+						<div id="divOverSlider"></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<!-- this is the area for the workflow button bar (contents in this area comes from the contents page) -->
+				<td id="ButtonBar"></td>
+			</tr>
+		</table>
+	</body>
+</html>
