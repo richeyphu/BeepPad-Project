@@ -124,8 +124,17 @@ namespace BeepPadUI
         {
             if (!durabox.Text.Equals(""))
             {
-                dura = int.Parse(durabox.Text);
-                this.Close();
+                try
+                {
+                    dura = int.Parse(durabox.Text);
+                    this.Close();
+                }
+                catch (FormatException)
+                {
+                    durabox.Text = durabox.Text.Split('.')[0];
+                    dura = int.Parse(durabox.Text);
+                    this.Close();
+                }
             }
         }
 
@@ -144,7 +153,7 @@ namespace BeepPadUI
 
         private void About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome to\n\"BeepPad 1.0.2 Beta\"\nMake your PC sings\n\nDevelopers :\n1.) Korndanai (1913110019)\n2.) Phurit (1913110027)\n3.) Pongpanot (1913110035)\n4.) Patiparn (1913110183)\n\nIT62@TNI INT-102 Group 3", "About BeepPad");
+            MessageBox.Show("Welcome to\n\"BeepPad 1.0.3 Beta\"\nMake your PC sings\n\nDevelopers :\n1.) Korndanai (1913110019)\n2.) Phurit (1913110027)\n3.) Pongpanot (1913110035)\n4.) Patiparn (1913110183)\n\nIT62@TNI INT-102 Group 3", "About BeepPad");
         }
 
         private void Preference_Enter(object sender, EventArgs e)

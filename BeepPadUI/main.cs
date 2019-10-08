@@ -80,7 +80,7 @@ namespace BeepPadUI
 
         private void Button17_Click(object sender, EventArgs e) //Exit Program
         {
-            checkPause = true;
+            checkStop = true;
             Thread.Sleep(300);
 
             bool check = false;
@@ -190,7 +190,7 @@ namespace BeepPadUI
 
         private void Signout_Click(object sender, EventArgs e) //Sign Out Button
         {
-            checkPause = true;
+            checkStop = true;
             melody.Text = null;
             signin.username = null;
             signin signinn = new signin();
@@ -842,16 +842,31 @@ namespace BeepPadUI
         }
 
         bool checkPlay = false;
+        bool checkPause = false;
         private void Play_Click(object sender, EventArgs e) //Play Button
         {
-            Thread play = new Thread(new ThreadStart(Play));
+            Thread _play = new Thread(new ThreadStart(Play));
             Thread.CurrentThread.Priority = ThreadPriority.Highest;
             //play.Priority = ThreadPriority.Highest;
 
-            if (!checkPlay)
+            if (checkPause) //Pause clicked
             {
-                play.Start();
-                checkPlay = true;
+                _play.Start();
+                play.Text = "Pause";
+            }
+            else if (!checkPlay) //first Play or after Stop clicked
+            {
+                _play.Start();
+                checkPlay = true; //Played - prevent iteration play
+
+                play.Text = "Pause";
+                checkPause = false;
+            }
+            else //first Pause clicked
+            {
+                checkStop = true; //Stop playing the melody
+                checkPause = true; //Pause Clicked
+                play.Text = "Play";
             }
 
             //Play();
@@ -861,7 +876,7 @@ namespace BeepPadUI
             string noteScore = melody.Text;
             foreach (char note in noteScore)
             {
-                if (checkPause)
+                if (checkStop)
                 {
                     break;
                 }
@@ -887,7 +902,7 @@ namespace BeepPadUI
             string noteScore = melody.Text;
             foreach (char note in noteScore)
             {
-                if (checkPause)
+                if (checkStop)
                 {
                     break;
                 }
@@ -900,20 +915,30 @@ namespace BeepPadUI
             }
         }
         */
+        int pausePos;
         void Play()
         {
-            checkPause = false; //Prevent duplicate Pause
+            checkStop = false; //Prevent duplicate Pause
             checkPlay = true; //Prevent duplicate Play
 
-            string noteScore = melody.Text;
-
-            //AppendTextBox();
-
             int select = 0;
+            string noteScore = "";
+
+            if (!checkPause) //First Play or after Stop clicked
+            {
+                noteScore = melody.Text;
+            }
+            else //Play after Pause clicked
+            {
+                select = pausePos;
+                noteScore = melody.Text.Substring(pausePos, melody.Text.Length - pausePos);
+                checkPause = false;
+            }
+            //AppendTextBox();
 
             foreach (char note in noteScore)
             {
-                if (checkPause)
+                if (checkStop)
                 {
                     break;
                 }
@@ -960,15 +985,25 @@ namespace BeepPadUI
 
                     default: Thread.Sleep(Setting.dura); break;
                 }
-                
+
                 Thread.Sleep(100);
             }
 
             this.Invoke((MethodInvoker)delegate ()
             {
-                melody.HideSelection = true;
+                play.Text = "Play";
+
+                if (checkPause)
+                {
+                    melody.HideSelection = false;
+                    pausePos = select;
+                }
+                else
+                {
+                    melody.HideSelection = true;
+                }
             });
-            
+
             checkPlay = false;
         }
 
@@ -997,12 +1032,12 @@ namespace BeepPadUI
             changeName.SelectAll();
         }
 
-        bool checkPause = false;
+        bool checkStop = false;
         private void Pause_Click(object sender, EventArgs e)
         {
             melody.HideSelection = true;
-            checkPause = true;
-            
+            checkStop = true;
+            checkPause = false;
         }
 
         private void Button16_Click(object sender, EventArgs e) //Previous Page
@@ -1061,7 +1096,7 @@ namespace BeepPadUI
 
         }
 
-        private void Newproject_Click(object sender, EventArgs e)
+        private void Newproject_Click(object sender, EventArgs e) //Clear clicked
         {
             melody.Text = null;
         }
