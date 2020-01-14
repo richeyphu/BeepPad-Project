@@ -62,7 +62,5 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-*.css linguist-detectable=false
-*.html inguist-detectable=false
-*.js inguist-detectable=false
-*.cs linguist-detectable=true
+# to change language of repo from HTML to C#
+    *.html linguist-language=C#
