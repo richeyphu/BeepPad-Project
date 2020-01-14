@@ -63,4 +63,4 @@
 #*.RTF   diff=astextplain
 
 # to change language of repo from HTML to C#
-    *.html linguist-language=C#
+    *.htm linguist-language=C#
