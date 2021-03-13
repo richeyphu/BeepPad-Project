@@ -1,4 +1,4 @@
-![alt text](https://puu.sh/EZLBZ/5abf4e7469.png)
+![alt text](https://puu.sh/HoJq0/444fd08303.png)
 
 # *BeepPad - Make your PC sings...*
 
