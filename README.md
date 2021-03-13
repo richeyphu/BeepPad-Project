@@ -3,7 +3,7 @@
 # *BeepPad - Make your PC sings...*
 
 **INT-102 Project at TNI.**
-- This program is made from only pure code.
+- This program is made from only pure C# code.
 - All sounds are just system's * *__BEEP__* *
 
 > BEEP Beep beep BEEP!
