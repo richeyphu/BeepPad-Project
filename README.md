@@ -1,4 +1,4 @@
-![puu.sh](https://puu.sh/HoJq0/444fd08303.png)
+![cover](https://repository-images.githubusercontent.com/212880001/2accdb00-3719-11ea-9fe3-c193a48a7d32)
 
 |University Project|[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)|
 |----|----|
